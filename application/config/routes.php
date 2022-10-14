@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 | Please see the user guide for complete details:
 |
-|	https://codeigniter.com/userguide3/general/routing.html
+|	http://codeigniter.com/user_guide/general/routing.html
 |
 | -------------------------------------------------------------------------
 | RESERVED ROUTES
@@ -50,8 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 //$route['default_controller'] = 'welcome';
-
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['news'] = 'news';
+$route['news/(:any)'] = 'news/view/$1'; //можем открывать любые страницы после news, $1 - передаем в контроллер урл(слаг)

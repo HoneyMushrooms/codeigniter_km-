@@ -3,3 +3,4 @@
 <?php foreach ($news as $key => $value): ?>
 	<h2> <?=$value['title']; ?> </h2>
 <?php endforeach ?>
+

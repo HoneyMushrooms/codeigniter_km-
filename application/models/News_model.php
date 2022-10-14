@@ -3,7 +3,7 @@
 class News_model extends CI_Model { //имя класса должно совпадать с названием файла
 
 	public function __construct() {
-		$this->load->database();
+		$this->load->database();  //загрузили бд, теперь можем обращаться
 	}
 
 	public function getNews($slug = FALSE) {
@@ -13,7 +13,7 @@ class News_model extends CI_Model { //имя класса должно совп�
 		}
 
 		$query = $this->db->get_where('news', array('slug' => $slug));
-		return $row_array();
+		return $query->row_array();
 	}
 
 }
